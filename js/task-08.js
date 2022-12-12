@@ -13,9 +13,12 @@ loginForm.addEventListener("submit", (e) => {
     return alert("Please fill in all the fields!");
   }
 
-  console.log(
-    `${email.name}: ${email.value}, ${password.name}: ${password.value}`
-  );
+  const loginData = {
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(loginData);
 
   e.currentTarget.reset();
 });
